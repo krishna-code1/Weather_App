@@ -14,3 +14,16 @@
     background-color: red;
     
 }
+.button:hover{
+    cursor: pointer;
+}
+.button1{
+    height: 30px;
+    width: 200px;
+    border-radius: 100px;
+    background-color: rgb(232, 78, 12);
+    
+}
+.button1:hover{
+    cursor: pointer;
+}

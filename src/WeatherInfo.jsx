@@ -1,14 +1,15 @@
 import './WeatherInfo.css';
 
-
 export default function WeatherInfo({weatherData}){
-let style  = {textDecoration:'underline', color:"yellow"}
+
+  let style  = {textDecoration:'underline', color:"yellow"}
+
     if(!weatherData){
-        return <h3 style={style}>Search your location</h3>
+        return <h3 style={style}>Search new location or Get current location weather</h3>
     }
 
-return (
-             <div className="weather-card">
+  return (
+    <div className="weather-card">
       <h2>
         {weatherData.location.name}, {weatherData.location.country}
       </h2>
@@ -26,16 +27,11 @@ return (
       <hr />
 
       <p><strong>Feels Like:</strong> {weatherData.current.feelslike_c}°C</p>
-
       <p><strong>Humidity:</strong> {weatherData.current.humidity}%</p>
-
       <p><strong>Wind:</strong> {weatherData.current.wind_kph} km/h</p>
-
       <p><strong>Pressure:</strong> {weatherData.current.pressure_mb} mb</p>
-
       <p><strong>UV Index:</strong> {weatherData.current.uv}</p>
-
       <p><strong>Last Updated:</strong> {weatherData.current.last_updated}</p>
-        </div>
-     )
+    </div>
+  )
 }
