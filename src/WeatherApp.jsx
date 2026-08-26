@@ -12,7 +12,6 @@ export default function WeatherApp(){
         try{
           const resp  = await fetch(url);
           const data = await resp.json();
-          // console.log(data);
           if(data.error){
              alert("No matching location found");
             return;
@@ -20,7 +19,6 @@ export default function WeatherApp(){
           setWeatherData(data);
         } catch(err){
             console.log(err);
-
         }
     };
 
@@ -52,7 +50,7 @@ export default function WeatherApp(){
     return(
         <div>
              <Search getWeather={getWeather}/>
-             <WeatherInfo weatherData= {weatherData}/>
+             <WeatherInfo weatherData = {weatherData}/>
              <Button getCurrentweather={getCurrentweather}/>
         </div>
     )
